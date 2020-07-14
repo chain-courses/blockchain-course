@@ -26,7 +26,7 @@ const ListItem = styled(({ className, active, level, ...props }) => {
     position: relative;
 
     &:hover {
-      color: #1ed3c6 !important;
+      color: #7395AE !important;
     }
 
     ${props =>
@@ -109,7 +109,7 @@ const SidebarLayout = ({ location }) => (
     render={({ allMdx }) => {
       const references = allMdx.edges.filter(edge => edge.node.fields.title.toLowerCase().includes("reference"));
       const [openReferences, setOpenReferences] = useState(false);
-      
+
       const notReferences = allMdx.edges.filter(edge => !edge.node.fields.title.toLowerCase().includes("reference"));
 
       return (

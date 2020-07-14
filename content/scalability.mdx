@@ -17,7 +17,7 @@ Bitcoin originally targeted one block every 10 minutes, with a 1MB block size (h
 
 <BlockSpeed />
 
-## Block Size/Block Creation Rate Debate
+# Block Size/Block Creation Rate Debate
 Over the past few years there has been a massive debate around proposals to change the Bitcoin block size or block creation rates. We will avoid taking a position on this issue, but we want to highlight the factors at play.
 - As block size or block creation rate increase, the memory and storage requirement to participate in the network increase.
 - As block size or block creation rate increase, it takes longer for edge nodes in the network to receive updates. This poses a number of problems:
@@ -30,7 +30,7 @@ As a result, there is a constant trade-off within the design of Bitcoin that req
 
 In particular, this means that it is critical to consider the network speeds and technological capital available to potential members of the network across the world.
 
-### Scalability Trade-offs
+# Scalability Trade-offs
 **Throughput vs Latency**: many of a blockchain’s benefits relate to having an immutable, trustless record of data. However, that record of data can only be trustless if you adhere to certain standards. For Bitcoin, those standards amount to the proof-of-work protocol and a blockchain that is open to the public. As throughput increases, you begin to limit the network’s ability to be open to the public, introducing new requirements to participation (being able to stay in sync with large, regular data updates that are primarily coming from the US or China - latency). By increasing latency, you begin to exclude smaller and more remote nodes from the network, thereby decreasing the trustless security guarantees that we could originally assume.
 
 **Public vs private**: This trade-off between throughput and latency is a sort of fundamental truth within blockchain, but that is not to say that there are not ways to ensure both. In a public blockchain, there has been an emphasis around using blockchain’s benefits in a very strong form - allow anyone to work with data, smart contracts, and cryptocurrency.
@@ -39,7 +39,7 @@ On the other hand, private, or permissioned blockchains in particular tend to ci
 
 For example, Ripple has one of the largest market caps, and has a permissioned network setup in which a few nodes run as “validator nodes”, which are more trusted and run the blockchain (add new blocks), while “stock servers” observe new blocks and help keep track of the blockchain. This allows them to ensure that the nodes which need to stay up-to-date with the blockchain can have certain requirements (namely bandwidth, geolocation, and being a trusted actor), enabling those nodes to process larger amounts of data (increase in throughput).
 
-### Measuring scalability
+# Measuring scalability
 In "Decentralization in Bitcoin and Ethereum Networks" Gencer et al. perform a measurement study to determine the level of decentralization of Bitcoin and Ethereum. In the figure below, we can see how they were able to use globally distributed computers to measure percentiles of bandwidth within Bitcoin and Ethereum.
 
 In other words, the slowest 10% of the Bitcoin network had under ~10Mbps bandwidth: requiring Bitcoin nodes to process above that much bandwidth would begin to push that 10% out of being able to participate freely in the network. This demonstrates the potential issues with increasing the Block size or frequency, and similar issues exist with many scalability solutions.
@@ -53,14 +53,14 @@ This process of measurement is quite valuable: repeating some similar form of me
 
 <Resources title="Suggested Reading" text="We strongly recommend reading the Gencer et al. paper. It goes into detail around various metrics of Blockchain networks to determine their decentralization, as well as related academic research in the field about mining power centralization within pools, resource requirements for participation, and more." resources={[ { link: "https://arxiv.org/abs/1801.03998", text: "“Decentralization in Bitcoin and Ethereum Networks”, Gencer et al. (Cornell University)" } ]} />
 
-#### There are MANY trade-offs in Blockchain
+### There are MANY trade-offs in Blockchain
 
 <Resources title="Note from James" text="One key thing we want to emphasize here is that many things in blockchain are trade-offs. These trade-offs exist throughout the field, and they are also one of the best ways to assess and evaluate new blockchain projects that you may discover. Bitcoin, Ethereum, and any other system that you have read the whitepaper for and have a strong understanding of are generally good reference points to use for those comparisons." resources={[ {text:"Whenever I read a new white-paper or listen to a new blockchain idea, I try to evaluate what technical, theoretical, and trust trade-offs are being made to enable whatever benefits are claimed."} ]} />
 
 # Scalability: Potential Solutions
 In the following sections, we highlight 3 technical methods that increase the scalability of Blockchain networks. Each solution has various trade-offs, and it is likely that none of them are complete solutions for scalability.
 
-## Potential Solution 1: Sidechains
+# Potential Solution 1: Sidechains
 Sidechains independently handle transactions and regularly “settle up” with the main blockchain.
 
 &nbsp;
@@ -123,7 +123,7 @@ Vulnerabilities are more common than a reputable, secure public blockchain, but 
 
 <LightningvsBitcoin />
 
-## Potential Solution 2: Bitcoin-NG
+# Potential Solution 2: Bitcoin-NG
 Bitcoin-NG is similar to a sidechain, but instead of being a layer on top of a blockchain, it actually allows for the same decentralized control that Bitcoin does, while allowing centralized processing of transactions by whichever node has mined the latest block.
 
 Leader Election
@@ -155,7 +155,7 @@ At its core, the original Bitcoin-NG paper highlighted stronger guarantees aroun
 
 &ast;It is difficult to find an exact estimate - this system has not been well-adopted. It would be less than bitcoin simply due to the throughput, as it keeps a lot of other factors similar to Bitcoin.
 
-## Potential Solution 3: Private/Permissioned Blockchains
+# Potential Solution 3: Private/Permissioned Blockchains
 
 **Ripple**:
 - **Throughput**: 1500 *tx/sec*

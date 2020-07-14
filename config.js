@@ -1,19 +1,19 @@
 const config = {
   gatsby: {
     pathPrefix: '/',
-    siteUrl: 'https://hasura.io',
+    siteUrl: 'https://chain.courses',
     gaTrackingId: null,
     trailingSlash: false,
   },
   header: {
-    logo: 'https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/brand.svg',
-    logoLink: 'https://hasura.io/learn/',
+    logo: '/src/components/images/logo.png',
+    logoLink: 'https://chain.courses/',
     title:
-      "<a href='https://hasura.io/learn/'><img class='img-responsive' src='https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/learn-logo.svg' alt='Learn logo' /></a>",
-    githubUrl: 'https://github.com/hasura/gatsby-gitbook-boilerplate',
+      "<a href='https://chain.courses/'><img class='img-responsive' src='/src/components/images/logo.png' alt='Chain.courses logo' /></a>",
+    githubUrl: 'https://github.com/chain-courses/blockchain-course',
     helpUrl: '',
     tweetText: '',
-    social: `<li>
+    /*social: `<li>
 		    <a href="https://twitter.com/hasurahq" target="_blank" rel="noopener">
 		      <div class="twitterBtn">
 		        <img src='https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/twitter-brands-block.svg' alt={'Discord'}/>
@@ -26,7 +26,7 @@ const config = {
 		        <img src='https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/discord-brands-block.svg' alt={'Discord'}/>
 		      </div>
 		    </a>
-		  </li>`,
+		  </li>`,*/
     links: [{ text: '', link: '' }],
     search: {
       enabled: false,
@@ -38,32 +38,35 @@ const config = {
   },
   sidebar: {
     forcedNavOrder: [
+      '',
       '/introduction', // add trailing slash if enabled above
-      '/privacy',
-      '/oracles',
       '/scalability',
+      '/privacy',
       '/hackability',
+      '/oracles',
+      '/stablecoins',
+      '/exchanges',
     ],
     collapsedNav: [
-      
+
     ],
     links: [],
     frontline: false,
-    ignoreIndex: true,
+    ignoreIndex: false,
     title: "Blockchain",
   },
   siteMetadata: {
-    title: 'Gatsby Gitbook Boilerplate | Hasura',
-    description: 'Documentation built with mdx. Powering hasura.io/learn ',
+    title: 'Chain.Courses | Learn Blockchain',
+    description: 'A Blockchain course based in the underlying technology, research, and innovation in the industry: not just hype.',
     ogImage: null,
-    docsLocation: 'https://github.com/hasura/gatsby-gitbook-boilerplate/tree/master/content',
-    favicon: 'https://graphql-engine-cdn.hasura.io/img/hasura_icon_black.svg',
+    docsLocation: 'https://github.com/chain-courses/blockchain-course',
+    favicon: '/src/components/images/logo-favicon.png',
   },
   pwa: {
     enabled: false, // disabling this will also remove the existing service worker.
     manifest: {
-      name: 'Gatsby Gitbook Starter',
-      short_name: 'GitbookStarter',
+      name: 'Blockchain Course by James & Rishub',
+      short_name: 'chain.courses',
       start_url: '/',
       background_color: '#6b37bf',
       theme_color: '#6b37bf',

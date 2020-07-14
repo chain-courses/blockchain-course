@@ -46,6 +46,10 @@ export const Sidebar = styled('aside')`
     color: ${props => props.theme.colors.text};
   }
 
+  .sidebarTitle {
+    color: ${props => props.theme.colors.background};
+  }
+
   @media only screen and (max-width: 50rem) {
     width: 100%;
     position: relative;
@@ -72,13 +76,13 @@ export const ListItem = styled(({ className, active, level, ...props }) => {
     position: relative;
 
     &:hover {
-      color: #1ed3c6 !important;
+      color: #7395AE !important;
     }
 
     ${props =>
       props.active &&
       `
-      color: #1ED3C6;
+      color: #7395AE;
       border-color: rgb(230,236,241) !important;
       border-style: solid none solid solid;
       border-width: 1px 0px 1px 1px;

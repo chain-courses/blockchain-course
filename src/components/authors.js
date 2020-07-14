@@ -16,11 +16,11 @@ const AuthorImg = styled('img')`
     border-radius: 30px;
 `
 
-const Author = ({ imgSrc, name, description }) => (
+const Author = ({ imgSrc, name, description, website }) => (
     <div style={{ display: "flex", alignItems: "center", paddingBottom: "20px"  }}>
         <AuthorImg src={imgSrc} alt="" />
         <div style={{ marginLeft: "10px" }}>
-            <p style={{ fontWeight: "bold" }}>{name}</p>
+            <p style={{ fontWeight: "bold" }}>{name} <a style={{ fontWeight: "normal", fontSize: "12px" }} href={website}>@{website}</a></p>
             <p style={{ fontSize: "14px" }}>{description}</p>
         </div>
     </div>
@@ -30,8 +30,8 @@ const Authors = () => {
   return (
         <AuthorContainer>
             <h4 style={{ marginBottom: "20px" }}>Written By</h4>
-            <Author imgSrc={jamesProfile} name="James Gan" description="Software Engineer II at PayPal" />
-            <Author imgSrc={rishubProfile} name="Rishub Kumar" description="Solutions Engineer at Alchemyapi.io" />
+            <Author imgSrc={jamesProfile} name="James Gan" website="https://bellevue.tech" description="Software Engineer II at PayPal" />
+            <Author imgSrc={rishubProfile} name="Rishub Kumar" website="http://rishub.com" description="Solutions Engineer at Alchemyapi.io" />
         </AuthorContainer>
   )
 };

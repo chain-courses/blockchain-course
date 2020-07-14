@@ -1,11 +1,10 @@
 ---
 title: "Hackability of the Blockchain"
 metaTitle: "Hackability of the Blockchain"
-metaDescription: "Hackability of the blockchain"
+metaDescription: "Hackability of the blockchain: this page covers vulnerabilities including 51% attacks, smart contract vulnerabilities, DDoS attacks, and selfish mining."
 ---
 
-## Can the Blockchain be hacked?
-
+# Can the Blockchain be hacked?
 Blockchain is one of the most powerful technologies in the world, and was built around allowing us to control our own data without
 the need for a central authority. However, like any technology it is not completely perfect, and there are certain ways for it to be hacked, although they can be complicated.
 Here is a visual with a high level description of the possible attacks/hacks that exist:
@@ -18,8 +17,7 @@ Here is a visual with a high level description of the possible attacks/hacks tha
 We will go over a few of these topics and explain them further.
 
 
-### 51% attack
-
+# 51% attack
 As we have learned, blockchain uses the Proof of Work algorithm to validate and confirm transactions. Nodes perform a set of computations that allow for this, and they can require a lot of computing power.
 This brings decentralization and the power that blockchain aims to bring, which is no central authority. However, it does require a lot of computing power from nodes around the world that work together
 to confirm these transactions and ensure the integrity of the blockchain.
@@ -31,29 +29,23 @@ the blockchain is diminishing over time. Overall, it is still important to under
 
 <FiftyOnePercent />
 
-
-### Smart contract loopholes/bugs
-
-Smart contracts allow for users to create rules and set guidelines that must be followed for transactions on the blockchain.
-Since they are publicly set on the blockchain, they cannot be altered after being deployed to the blockchain.
-
-What this means, however, is that if there were any bugs, mistakes, or loopholes created in the smart contract at time of creation, this means
-they are free to be exploited. This means writing tests and ensuring the execution of the contract works as expected is crucial.
+# Smart contract loopholes/bugs
+Smart contracts allow for users to create rules and set guidelines that must be followed for transactions on the blockchain. Since smart contracts are immutably deployed on the blockchain, they cannot be altered after being released without a careful rollover plan for its users.
 
 <Resources
     title="Examples of Bad Smart Contract Code"
-    text="But due to the nature of programming, there are bound to be bugs and exploits possible at some point. And when these loopholes come up, malicious actors can take advantage of them.
-        This can allow for users to gain money they do not own, or even steal money with no record on the blockchain. Clearly, this is a problem and there can be counless bugs that allow hacks on the blockchain.
-        Thus, it is crucial that smart contract developers are aware of these risks and are extra careful when deploying contracts."
+    text="What this means is that any bugs, mistakes, or loopholes that were created in the smart contract remain in the smart contract in a very resilient manner. This means they are free to be exploited, and can result in million dollar losses quite easily. This means writing tests and ensuring the execution of the contract works as expected is crucial. Otherwise, the code could easily allow for malicious actors to gain money they do not own, or even steal money with no real recourse. Clearly, this is a problem and there can be counless bugs that allow hacks on the blockchain."
     resources={[
         { link: "https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/", text: "DAO exploit" },
         { link: "https://medium.com/@jamesgan/how-i-found-a-25m-vulnerability-in-blockchain-c2717d531dd8", text: "Bancor vulnerability" }
     ]}
 />
 
+<Resources title="Suggested Reading, Smart Contract Developers" text="Ultimately, due to the nature of programming, there are bound to be bugs and exploits possible at some point. And when these loopholes come up, malicious actors can take advantage of them. These issues are further emphasized due to the nacent nature of blockchain development. There are many security vulnerabilities that arise in smart contracts that might not have been possible, or would have been more easily caught, in a traditional programming paradigm. It is critical for blockchain developers to be aware of these vulnerabilities, stay up to date with them, and regularly audit their code prior to release." resources={[
+  {link:"https://motherboard.vice.com/en_us/article/8xddka/millions-of-dollars-in-ethereum-are-vulnerable-to-hackers-right-now-smart-contract-bugs", text: "Millions of Dollars In Ethereum Are Vulnerable to Hackers Right Now. Pearson, 2018." },
+  {link:"https://dasp.co/", text:"Decentralized Application Security Project. 2019."} ]} />
 
-### Denial of service attacks
-
+# Denial of service attacks
 Denial of service attacks, or DDOS attacks, are not specific to blockchain and are really common throughout the industry of technology.
 It essentially requires hackers to flood the network with requests which will make it difficult for actual requests to get through to the systems.
 While this happens in non-blockchain systems as well, it is very similar on the blockchain.
@@ -64,10 +56,9 @@ Due to the computational power and resources required to confirm transactions, t
 While this is not truly hacking, as the hacker as no way of stealing monetary value from others, it can still cause a lot of disruption to the systems and blockchain overall.
 
 
-### Selfish mining
-
-Selfish mining is an additional method of exploiting the blockchain that was first introduced 
-in <a href="https://www.cs.cornell.edu/~ie53/publications/btcProcFC.pdf">this 2013 paper</a> written by Cornell researchers Ittay Eyal and Emin G¨un Sirer.
+# Selfish mining
+Selfish mining is an additional method of exploiting the blockchain that was first introduced
+in <a href="https://www.cs.cornell.edu/~ie53/publications/btcProcFC.pdf">this 2013 paper</a> written by Cornell researchers Ittay Eyal and Emin Gun Sirer.
 
 The overall idea is that bitcoin assumes that miners will create blocks on the public blockchain. Sirer and Eyal showed that it is possible for miners to hide new blocks
 and make them available only to their private networks. By hiding these blocks from the public blockchain in a separate fork, they can end up earning more and more bitcoin.
@@ -75,6 +66,5 @@ and make them available only to their private networks. By hiding these blocks f
 While this is something to be aware of and could end up undermining bitcoin's decentralized nature (Frankfield 2019), there are defense mechanisms against selfish mining as we
 see in <a href="https://eprint.iacr.org/2014/007.pdf">this paper</a> written by a Boston University PHD Candidate.
 
-
-#### Resources for learning / topics that need to be covered
+# Further Resource: Automatic Security Auditing Tool
 - Paper on Securify,  https://arxiv.org/abs/1806.01143
