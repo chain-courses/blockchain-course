@@ -18,6 +18,7 @@ export default class MDXRuntimeTest extends Component {
     if (!data) {
       return null;
     }
+    console.log(data)
     const {
       allMdx,
       mdx,

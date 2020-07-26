@@ -1,0 +1,81 @@
+---
+title: "Tradeoffs in Blockchain"
+metaTitle: "Tradeoffs in Blockchain"
+metaDescription: "Tradeoffs in Blockchain: this page covers vulnerabilities including 51% attacks, smart contract vulnerabilities, DDoS attacks, and selfish mining."
+---
+# Introduction
+Blockchain as a whole has many tradeoffs. These tradeoffs include, but are not limited to:
+
+1. Decentralization Tradeoffs
+1. Scalability Tradeoffs
+1. Security Tradeoffs
+1. Cost Tradeoffs
+1. Risk Tradeoffs
+1. Investment/Hype Tradeoffs
+1. Innvoation Tradeoffs
+
+These categories can overlap: decentralization and scalability go hand-in-hand, security and cost regularly interact with each other, and there are many tradeoffs between innovation, getting investment, and risk. In reality, these categories will almost always overlap - it is hard to imagine any of these factors not overlapping with cost or risk. In this section, we will look into some of these tradeoffs in greater detail.
+
+# Decentralization & Regulation Tradeoff
+<Resources title="Further Reading" text="The most significant tradeoff in Blockchain is how decentralized technologies enable certain forms of hyper-anonymity that can make enforcement of regulatory requirements and laws exceedingly difficult. In many cases, this feature of decentralized technology is one of its major draws: many of the first use cases for Blockchain revolved around illegal goods and services on a dark-web platform. This platform drew the attention of authorities in many countries, ultimately leading to its creator being arrested and imprisoned for numerous crimes." resources={
+  [ {
+    text:"Ross Ulbricht &  The Silk Road.",
+    link:"https://www.fbi.gov/contact-us/field-offices/newyork/news/press-releases/ross-ulbricht-the-creator-and-owner-of-the-silk-road-website-found-guilty-in-manhattan-federal-court-on-all-counts"} ]
+  }
+/>
+
+On the other hand, there have been many attempts to bring decentralized technologies to compliance with regulatory bodies. In many cases, this results in a devaluation or counteracting of many guaruntees that the projects claim to offer. These shortcomings include security vulnerabilities in the case of the DAO (discussed below under "[Security vs Cost: Risk](http://localhost:8000/tradeoffs#securityvscost:risk)"). However, this can also include solutions that retain control over key parts of the system, similar to traditional centralized systems with admin privileges, that simply do not offer the benefits of decentralization that they claim to.
+
+<Resources title="Suggested Reading" text="It can be appealing, especially for traditional organizations, to create centralized Blockchain solutions. However, as indicated in the Harvard Business Review by Furlong and Uzureau, “Centralized governance has allowed business leaders to experiment with the technology while sidestepping controversial questions around security, consensus, identity and anonymity, among others. Yet the centralized model also creates new risks around how the technology, economics and governance of the blockchain are controlled”." resources={
+  [ {
+    text:"The 5 Kinds of Blockchain Projects (and Which to Watch Out For). (Harvard Business Review)",
+    link:"https://hbr.org/2019/10/the-5-kinds-of-blockchain-projects-and-which-to-watch-out-for"} ]
+  }
+/>
+
+We want to avoid naming any specific projects as examples for lost guaruntees; **we encourage readers to explore whitepapers for themselves to determine how the centralization of any given project might reduce its guarantees**.
+
+# Decentralization & Scalability Tradeoffs
+**Throughput vs Latency**: many of a blockchain’s benefits relate to having an immutable, trustless record of data. However, that record of data can only be trustless if you adhere to certain standards. For Bitcoin, those standards amount to the proof-of-work protocol and a blockchain that is open to the public. As throughput increases, you begin to limit the network’s ability to be open to the public, introducing new requirements to participation (being able to stay in sync with large, regular data updates that are primarily coming from the US or China - latency). By increasing latency, you begin to exclude smaller and more remote nodes from the network, thereby decreasing the trustless security guarantees that we could originally assume.
+
+**Public vs private**: This trade-off between throughput and latency is a sort of fundamental truth within blockchain, but that is not to say that there are not ways to ensure both. In a public blockchain, there has been an emphasis around using blockchain’s benefits in a very strong form - allow anyone to work with data, smart contracts, and cryptocurrency.
+
+On the other hand, private, or permissioned blockchains in particular tend to circumvent this issue by allowing many trusted actors to participate in the network, and typically trying to practice good regulatory compliance. This approach allows you to place requirements on the member nodes of your network, **which can significantly reduce decentralization, public usability, or trustless nature of the system**, but *can* introduce similar benefits within the network that you establish.
+
+For example, Ripple has one of the largest market caps, and has a permissioned network setup in which a few nodes run as “validator nodes”, which are more trusted and run the blockchain (add new blocks), while “stock servers” observe new blocks and help keep track of the blockchain. This allows them to ensure that the nodes which need to stay up-to-date with the blockchain can have certain requirements (namely bandwidth, geolocation, and being a trusted actor), enabling those nodes to process larger amounts of data (increase in throughput).
+
+# Security vs Cost: Risk
+The following categories heavily overlap with tradeoffs for risk. Computer security where Blockchain is involved is a costly, slow, and nacent process. Many vulnerabilities are impossible to know until someone loses a lot of money from them, and others are simply slow and difficult to fix even once detected.
+
+<Resources title="Suggested Reading" text="One such example of a vulnerability was the DAO (Distributed Autonomous Organization). The DAO was the target of a historical multi-million dollar hack. It was one of the largest hacks in Blockchain history, relative to the size of the Blockchain industry at the time. Ethereum was the second largest cryptocurrency, behind Bitcoin. It was the first alternative to Bitcoin to come up, and people held it in high regard. The idea of a Decentralized Autonomous Organization, i.e. an organization run in a decentralized way without any central authority, had been around for a few years, lauded by many as a valuable Blockchain use case. Even Vitalik Buterin, the founder of Ethereum, noted in 2014 that DAOs are considered “the holy grail” (of Blockchain)."
+  resources={[
+    {link: "https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide/", text: "DAOs, DACs, DAs and More: An Incomplete Terminology Guide (Vitalik Buterin)"},
+    {link: "https://www.coindesk.com/understanding-dao-hack-journalists", text: "Understanding The DAO Attack"}
+  ]} />
+
+<Resources title="Suggested Reading" text="As a result, when the DAO came about many people in Blockchain wanted to invest in it, believing that it, and similar DAOs, would begin to replace public and private companies to be the future of industry. The DAO raised over $150m USD, far beyond what any Blockchain crowdsale had raised in the past - owning nearly 15% of the Ether cryptocurrency supply. Shortly after the crowdsale was finished, bugs started to be identified. Figures ranging from Vlad Zamfir, a well-known contributor to the Ethereum environment, to Emin Gün Sirer, a well-known academic researcher focusing on Blockchain, identified these bugs and raised the alarm. Nearly a month later, however, the vulnerabilities had not yet been fixed, and the DAO was exploited to steal roughly $50m USD from the decentralized application running it. This ultimately led to a significant drop in the price of Ether (~35%). The only solution the Ethereum community had was to create a fork undoing the hack, which ended up splitting Ethereum into Ethereum and Ethereum Classic (Ethereum Classic is still worth roughly $700m USD as of July 2020, even while it has suffered from 51% attacks and other exploits due to being largely unimproved since branching off from the main Ethereum community). The vulnerability at the heart of the hack included a “reentrancy problem in the 'splitDAO' function”, but many others existed in the code simultaneously."
+  resources={[
+    {link: "https://hackingdistributed.com/2016/05/27/dao-call-for-moratorium/", text: "A Call for a Temporary Moratorium on The DAO (Dino Mark, Vlad Zamfir, and Emin Gün Sirer)"},
+    {link: "https://hackingdistributed.com/2016/06/17/thoughts-on-the-dao-hack/", text: "Thoughts on The DAO Hack (Emin Gün Sirer)"},
+    {link: "https://www.nytimes.com/2016/05/28/business/dealbook/paper-points-up-flaws-in-venture-fund-based-on-virtual-money.html", text: "Paper Points Up Flaws in Venture Fund Based on Virtual Money (New York Times)"}
+]} />
+
+<Resources title="Suggested Reading" text="To highlight how extreme the concern of vulnerabilities is, numerous audits and reports of the history of hacks have been publicized. Pearson explains how researchers have been able to regularly discover tens of thousands of buggy smart contracts (code hosted on blockchain networks, a common method to implement stablecoin mechanisms) which put millions of dollars at risk of being stolen. Years after the DAO hack, the Decentralized Application Security Project has published a list of the top vulnerabilities of 2018, alongside how much money has been stolen through each exploit (totaling hundreds of millions of dollars, where listed)." resources={[
+  {link:"https://motherboard.vice.com/en_us/article/8xddka/millions-of-dollars-in-ethereum-are-vulnerable-to-hackers-right-now-smart-contract-bugs", text: "Millions of Dollars In Ethereum Are Vulnerable to Hackers Right Now. Pearson, 2018." },
+  {link:"https://dasp.co/", text:"Decentralized Application Security Project. 2019."} ]} />
+
+# Further Tradeoff Concerns
+We may cover these tradeoffs in more detail in the future, given appropriate interest.
+
+1. **Security vs Cost: Smart Contract Gas.** More complex security authentication requires more gas, or whatever decentralized application costs for the Blockchain virtual machines.
+
+1. **Security vs Cost: Blockchain Development.** Auditing Blockchain code is expensive. Limited automated security tools exist for Blockchain, and few developers are even experienced enough with the industry to understand how to audit Blockchain systems.
+
+1. **Risk Tradeoffs: Compliance vs Innovation.** Bitcoin itself is a good example of this, and this is largely related to the category above "Decentralization & Regulation Tradeoff", with one specific difference: this tradeoff is not focused on specific intention or creating some ability to avoid regulation. Instead, it is focused on innovation in a space where regulations do not currently exist. Cryptocurrency, over a decade after being created, still has little in the way of clear, codified tax code or legal definition in general. This is a clear risk to anyone looking to create or use Blockchain systems, but by waiting for legislation, it is easy to miss innovation opportunities.
+
+1. **Risk Tradeoffs: Compliance vs Investment/Hype.** Similar to the risk above, waiting for compliance can also miss out on significant opportunities to capitalize on a market trend. For example, while traditional organizations have largely waited to get involved in Blockchain, new companies such as Coinbase have grown to a multibillion dollar market cap by embracing the technology.
+
+1. **Tradeoffs in Blockchain Involvement from Industry.** Companies have to weigh all these kinds of tradeoffs to determine how, if at all, they get involved in Blockchain. Libra is a clear example of this - they were able to get many other companies to sign onto their consortium model early on, but as regulation and compliance risk made itself more apparent, many of those members withdrew from the partnership. On the other hand, some other organizations (such as Ripple) have been able to counterbalance these risks by creating systems that are partially centralized by nature, and do not seek to work in areas where they would risk facing insurmountable compliance risk.
+
+# Conclusion: There are MANY trade-offs in Blockchain
+<Resources title="Note from James" text="One key thing we want to emphasize here is that many things in blockchain are trade-offs. We covered some here, but there are many, many, more. These trade-offs exist throughout the field, and they are also one of the best ways to assess and evaluate new blockchain projects that you may discover. Bitcoin, Ethereum, and any other system that you have read the whitepaper for and have a strong understanding of are generally good reference points to use for those comparisons." resources={[ {text:"Whenever I read a new white-paper or listen to a new blockchain idea, I try to evaluate what technical, theoretical, and trust trade-offs are being made to enable whatever benefits are claimed."} ]} />

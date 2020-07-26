@@ -94,7 +94,7 @@ const Header = ({ location, isDarkThemeActive, toggleActiveTheme }) => (
       const finalLogoLink = '';
 
       return (
-        <div className={'navBarWrapper'}>
+        <div className={'navBarWrapper'} style={{ background: isDarkThemeActive ? "#5D5C61" : ""}}>
           <nav className={'navBarDefault'}>
             <div className={'navBarHeader'}>
               <Link to={finalLogoLink} className={'navBarBrand'}>

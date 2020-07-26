@@ -262,7 +262,6 @@ export const baseStyles = injectGlobal`
     padding: 0 !important;
   }
   .navBarDefault {
-    background-color: #5D5C61;
     border-radius: 0;
     border-top: 0;
     margin-bottom: 0;
@@ -374,12 +373,11 @@ export const baseStyles = injectGlobal`
   /* Header section ends here */
   .sidebarTitle {
     /* box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16); */
-    background-color: #f8f8f8;
     padding: 18px 16px;
     font-family: 'Poppins';
     font-size: 18px;
     font-weight: 600;
-    color: #5D5C61;
+    color: black;
     display: flex;
     align-items: center;
   }
@@ -786,6 +784,7 @@ export const baseStyles = injectGlobal`
     }
     .topnav.responsive .visibleMobile {
       display: block;
+      background: white;
     }
     .topnav .navBarUL {
       display: none;
