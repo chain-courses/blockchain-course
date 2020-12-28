@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url> <loc>https://chain.courses/hackability-references</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://chain.courses/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://chain.courses/exchanges</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://chain.courses/hackability</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://chain.courses/introduction-references</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://chain.courses/privacy-references</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://chain.courses/scalability-references</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://chain.courses/oracles</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://chain.courses/introduction</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://chain.courses/privacy</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://chain.courses/scalability</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://chain.courses/stablecoins-references</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://chain.courses/stablecoins</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://chain.courses/tradeoffs</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+</urlset>
